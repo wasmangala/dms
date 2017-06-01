@@ -54,6 +54,9 @@ models.forEach(function(model) {
         m.Request.belongsTo(m.MinistryDept, {as:"MinistryDept", foreignKey: "min_deptID"});
         m.MinistryDept.hasMany(m.Request, {as:"Request", foreignKey: "min_deptID"});
 
+        m.MinistryDept.hasMany(m.MainCadre, {as:"MainCadre", foreignKey: "min_deptID"});
+        m.MainCadre.belongsTo(m.MinistryDept, {as:"MinistryDept", foreignKey: "min_deptID"});
+
     //--------------------- Relationships----------------------\\
 
     
