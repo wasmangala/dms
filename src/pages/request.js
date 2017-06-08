@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/css/bootstrap-theme.css';
+import './uploader.css';
+import './uploaderj.js';
+
+
 
 
 
@@ -114,20 +118,47 @@ class request extends Component {
 
  {/* Textarea */} 
 <div className="form-group">
-  <label className="col-md-4 control-label" for="comments">Comments</label>
+  <label className="col-md-4 control-label" for="description">Description</label>
   <div className="col-md-4">                     
-    <textarea className="form-control" rows="5" id="comments" name="comments"></textarea>
+    <textarea className="form-control" rows="5" id="description" name="description"></textarea>
   </div>
 </div>
 
+ <div className="col-md-12">
+      <div className="row">
+      <div className="control-group" id="fields">
+          <label className="control-label" for="field1">
+            Upload Your Files
+          </label>
+          <div className="controls">
+           
+              <div className="entry input-group col-xs-3">
+                
+             
+                <input className="btn btn-primary" name="fields[]" type="file"/>
+                <span className="input-group-btn">
+      
+              <button className="btn btn-success btn-add" type="button">
+                                <span className="glyphicon glyphicon-plus"></span>
+                </button>
+                </span>
+              </div>
+           
+          </div>
+          
+        </div>
+      </div>
+    </div>
 
 {/* Button */} 
 <div className="form-group">
   <label className="col-md-4 control-label" for="submit"></label>
+
   <div className="col-md-4">
     <button id="submit" name="submit" className="btn btn-default">Submit</button>
   </div>
 </div>
+
 
 </fieldset>
 </form>

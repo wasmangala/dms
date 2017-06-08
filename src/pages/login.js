@@ -25,7 +25,7 @@ class login extends Component {
                    
                     <div className="input-group">
                         <span className="input-group-addon"><i className="glyphicon glyphicon-user"></i></span>
-                        <input id="user" type="text" className="form-control" name="user" value="" placeholder="Username"/>                                        
+                        <input id="user" type="text" className="form-control" name="user"  placeholder="Username"/>                                        
                     </div>
 
                     <div className="input-group">
