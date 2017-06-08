@@ -1,14 +1,23 @@
 import React, { Component } from 'react';
+import {BrowserRouter as Router, Route, Link } from 'react-router-dom'
+import login from './pages/login'
+import home from './pages/home'
+import request from './pages/request'
+import recommendation from './pages/recommendation'
+import approval from './pages/approval'
+
 
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/css/bootstrap-theme.css';
-import './login.css';
+
+
 
 
 
 class App extends Component {
   render() {
     return (
+      <Router>
       <div className="App">
       <nav className="navbar navbar-inverse">
   <div className="container-fluid">
@@ -23,10 +32,11 @@ class App extends Component {
       <a className="navbar-brand" href="#">DMS Cadre Management System</a>
     </div>
 
-    
+
     <div className="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
       <ul className="nav navbar-nav">
         
+
         <li className="dropdown">
           <a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Request <span className="caret"></span></a>
           <ul className="dropdown-menu">
@@ -90,44 +100,20 @@ class App extends Component {
 </nav>
 
 
-<div id="loginbox" className="mainbox col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3"> 
-
-<div className="panel panel-default" >
-            <div className="panel-heading">
-                <div className="panel-title text-center">Please Login</div>
-            </div>     
-
-            <div className="panel-body" >
-
-                <form name="form" id="form" className="form-horizontal" enctype="multipart/form-data" method="POST">
-                   
-                    <div className="input-group">
-                        <span className="input-group-addon"><i className="glyphicon glyphicon-user"></i></span>
-                        <input id="user" type="text" className="form-control" name="user" value="" placeholder="Username"/>                                        
-                    </div>
-
-                    <div className="input-group">
-                        <span className="input-group-addon"><i className="glyphicon glyphicon-lock"></i></span>
-                        <input id="password" type="password" className="form-control" name="password" placeholder="Password"/>
-                    </div>                                                                  
-
-                    <div className="form-group">
-                    
-                        <div className="col-sm-12 controls">
-                            <button type="submit" href="#" className="btn btn-primary pull-right"><i className="glyphicon glyphicon-log-in"></i> Log in</button>                          
-                        </div>
-                    </div>
-
-                </form>     
-
-            </div>                     
-        </div>
 
 
-      </div>
-  
+<div className="container">
 
 </div>
+
+<Route exact={true} path="/" component={login} />
+<Route path="/home" component={home} />
+<Route path="/request" component={request} />
+<Route path="/recommendation" component={recommendation} />
+<Route path="/approval" component={approval} />
+  
+</div>
+</Router>
     );
   }
 }
