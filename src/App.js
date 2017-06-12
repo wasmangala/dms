@@ -5,6 +5,14 @@ import home from './pages/home'
 import request from './pages/request'
 import recommendation from './pages/recommendation'
 import approval from './pages/approval'
+import requestDetails from './pages/requestDetails'
+import adduser from './pages/adduser'
+import addMinistryDept from './pages/addMinistryDept'
+import addDesignation from './pages/addDesignation'
+import addGrade from './pages/addGrade'
+import addSalaryCode from './pages/addSalaryCode'
+
+
 
 
 import 'bootstrap/dist/css/bootstrap.css';
@@ -111,7 +119,14 @@ class App extends Component {
 <Route path="/request" component={request} />
 <Route path="/recommendation" component={recommendation} />
 <Route path="/approval" component={approval} />
-  
+<Route path="/requestDetails" component={requestDetails} />
+<Route path="/adduser" component={adduser} />
+<Route path="/addMinistryDept" component={addMinistryDept} />
+<Route path="/addDesignation" component={addDesignation} />
+<Route path="/addGrade" component={addGrade} />
+<Route path="/addSalaryCode" component={addSalaryCode} />
+ 
+
 </div>
 </Router>
     );
